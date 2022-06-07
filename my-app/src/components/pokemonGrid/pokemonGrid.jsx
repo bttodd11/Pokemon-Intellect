@@ -1,12 +1,17 @@
-import "./pokemonGrid.true";
 import React from "react";
+import { fetchAllPokemonNames } from "../../utilities/fetchPokemon";
 
-function template() {
-  return (
-    <div className="pokemon-grid">
-      <h1>pokemonGrid</h1>
+let pokemonGrid = () => {
+
+  let pokemonNames = fetchAllPokemonNames();
+
+
+  return(
+    <div>
+
     </div>
-  );
-};
+  )
 
-export default template;
+}
+
+export default pokemonGrid
