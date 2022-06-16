@@ -15,13 +15,12 @@ export function fetchAllPokemonNames(gen){
 
     let gen1PokemonNames = [];
     let gen2PokemonNames = [];
-    console.log(gen)
+
     if (gen == 1) {
       // Generation 1 names;
       for (let index = 0; index < 151; index++) {
         gen1PokemonNames.push(originalPokemonData.results[index].name);
       }
-      console.log(gen1PokemonNames)
       return gen1PokemonNames;
     }
 
@@ -30,7 +29,6 @@ export function fetchAllPokemonNames(gen){
       for (let index = 152; index < 252; index++) {
         gen2PokemonNames.push(originalPokemonData.results[index].name);
       }
-      console.log(gen2PokemonNames)
       return gen2PokemonNames
     }
 
