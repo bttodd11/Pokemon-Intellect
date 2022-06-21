@@ -3,9 +3,5 @@
 @tailwind utilities;
 
 .appBackground {
-  @apply bg-slate-700 h-screen
-}
-
-.titleHeader {
-  @apply font-mono text-center tracking-widest 
+  @apply bg-white h-screen 
 }

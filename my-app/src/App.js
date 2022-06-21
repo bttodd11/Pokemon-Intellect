@@ -26,14 +26,13 @@ let App = () => {
   };
 
   const menuStyle = {
-    borderRadius: "35px",
-    boxShadow: "0 2px 12px rgba(0, 0, 0, 0.1)",
-    background: "rgba(255, 255, 255, 0.9)",
-    padding: "2px 0",
-    fontSize: "90%",
-    position: "fixed",
+    borderRadius: "15px",
+    boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
+    background: "#FBF7F7",
+    padding: "10px",
+    fontSize: "20px",
     overflow: "auto",
-    maxHeight: "10%", // TODO: don't cheat, let it flow to the bottom
+    maxHeight: "10%", // TODO: don't cheat, let it flow to the bottom,
   };
 
   useEffect(() => {
@@ -41,14 +40,13 @@ let App = () => {
   }, [pokemonList.length > 0]);
 
   return (
-    <div>
+    <div className="relative">
       {pokemonList.length !== 0 ? (
         <body className="appBackground">
         <div className="container">
-          <h1 className="titleHeader">Pokemon Intellect</h1>
-          <div className="p-10 pl-10 content-center">
+          <h1 className="font-mono text-center tracking-widest text-6xl text-blue-700/25">Pokemon Intellect</h1>
+          <div className="mt-20 flex justify-center">
             <Autocomplete
-              className="mt-20"
               items={pokemonList}
               value={value}
               onChange={(e) => setValue(e.target.value)}
@@ -62,11 +60,13 @@ let App = () => {
                   {pokemon}
                 </div>
               )}
-              menuStyle={{ menuStyle }}
+              inputProps={{ style: menuStyle }}
               onSelect={(pokemon) => setValue(pokemon)}
             />
           </div>
-          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded">Select Pokemon</button>
+          <div className="flex justify-center">
+          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded absolute bottom-5">Select Pokemon</button>
+          </div>
         </div>
         </body>
       ) : null}
