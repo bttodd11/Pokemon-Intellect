@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .appBackground {
-  @apply bg-white h-screen 
+  @apply bg-white h-screen
+}
+
+.panelBackGround {
+  @apply bg-slate-200
 }
