@@ -33,7 +33,7 @@ let App = () => {
   };
 
   const menuStyle = {
-    borderRadius: "15px",
+    borderRadius: "5px",
     boxShadow: "0 2px 4px rgb(148 163 184)",
     background: "rgb(148 163 184);",
     padding: "10px",
@@ -62,7 +62,9 @@ let App = () => {
             </p>
             {/* Here I want to create a different grid layout */}
             <div class="grid grid-rows-3 grid-flow-col gap-4 mt-12 ">
-              <div className="panelBackGround relative text-center row-span-3 border-solid border-2 h-80">
+
+
+              <div className="panelBackGround relative text-center row-span-3 border-solid border-2 h-80 w-full">
                 <h3 className="font-mono text-xl mt-3 mb-20 text-white">Select Pokemon</h3>
                 <Menu as="div" className="relative inline-block text-left">
                   <div>
@@ -81,7 +83,7 @@ let App = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-16 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-22 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <div className="py-1 px-2">
                         <Menu.Item>
                           {({ active }) => (
@@ -92,7 +94,7 @@ let App = () => {
                                 'block px-1 py-1 text-sm'
                               )}
                             >
-                              V1
+                              Version 1
                             </a>
                           )}
                         </Menu.Item>
@@ -105,7 +107,7 @@ let App = () => {
                                 'block px-1 py-1 text-sm'
                               )}
                             >
-                              V2
+                              Version 2
                             </a>
                           )}
                         </Menu.Item>
@@ -131,11 +133,11 @@ let App = () => {
                   inputProps={{ style: menuStyle }}
                   onSelect={(pokemon) => setValue(pokemon)}
                 />
-                <div className="absolute bottom-1 left-5 w-full panel">
-                  <button className="w-32 bg-white hover:bg-blue-400 text-slate-300 text-sm font-bold rounded px-6 py-2">
+                <div className="w-100 absolute bottom-0 mx-auto">
+                  <button className="text-center bg-white hover:bg-blue-400 text-slate-300 text-sm font-bold rounded px-6 py-2">
                     Select
                   </button>
-                </div>
+                  </div>
               </div>
               <div className="panelBackGround col-span-2 border-solid border-2 h-40">2</div>
               <div className="panelBackGround col-span-2 border-solid border-2 h-40">2</div>

@@ -9,7 +9,11 @@ module.exports = {
       "40": "152px",
       "80": "320px",
       "screen": "100vh",
-    }
+    },
+    width: {
+      "22": "87px",
+      "100": "100%"
+    },
   },
   plugins: [],
 }
